@@ -1,0 +1,87 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "default",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "noClear": true,
+  "sessions": {
+    "default": [
+      [
+        {
+          "name": "Parent",
+          "icon": "terminal",
+          "message": "Parent:",
+          "cwd": "..",
+          "commands": [
+            "./__gource__/run.sh"
+          ],
+          "autoExecuteCommands": false
+        },
+        {
+          "name": "Root",
+          "icon": "terminal",
+          "color": "terminal.ansiBlue",
+          "message": "Root:",
+          "commands": [
+            "npm run l"
+          ],
+          "autoExecuteCommands": false
+        }
+      ],
+      [
+        {
+          "name": "Server",
+          "icon": "terminal",
+          "color": "terminal.ansiGreen",
+          "message": "Server:",
+          "cwd": "./server",
+          "commands": [
+            "npm run d"
+          ],
+          "autoExecuteCommands": false,
+          "focus": true
+        },
+        {
+          "name": "Shared",
+          "icon": "terminal",
+          "color": "terminal.ansiYellow",
+          "message": "Shared:",
+          "cwd": "./shared",
+          "commands": [
+            "npm run c"
+          ]
+        },
+        {
+          "name": "Web",
+          "icon": "terminal",
+          "color": "terminal.ansiRed",
+          "message": "Web:",
+          "cwd": "./web",
+          "commands": [
+            "npm run d"
+          ],
+          "autoExecuteCommands": false
+        }
+      ],
+      [
+        {
+          "name": "Landing",
+          "icon": "terminal",
+          "color": "terminal.ansiCyan",
+          "message": "Landing:",
+          "cwd": "./landing",
+          "commands": []
+        },
+        {
+          "name": "Docs",
+          "icon": "terminal",
+          "color": "terminal.ansiMagenta",
+          "message": "Docs:",
+          "cwd": "./docs",
+          "commands": []
+        }
+      ]
+    ]
+  }
+}

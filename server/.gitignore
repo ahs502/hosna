@@ -1,0 +1,5 @@
+.env
+.env.stage
+.env.live
+
+scripts/stripe/products-output.json

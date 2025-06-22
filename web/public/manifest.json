@@ -1,0 +1,14 @@
+{
+  "name": "maxclicks Web Application",
+  "short_name": "maxclicks",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2F2F2F",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}

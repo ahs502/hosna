@@ -1,0 +1,16 @@
+.git
+.github
+.vscode
+**/node_modules
+**/npm-debug.log
+**/.env
+**/.env.*
+**/.DS_Store
+**/coverage
+**/.coverage
+**/.nyc_output
+**/dist
+**/*.log
+**/.next
+**/build
+**/*.md

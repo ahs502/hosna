@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Look at the tailwind-base-syntax.css reference for more options: */
+
+html,
+:host {
+  .cssNativeStyles,
+  h1.cssNativeStyles,
+  h2.cssNativeStyles,
+  h3.cssNativeStyles,
+  h4.cssNativeStyles,
+  h5.cssNativeStyles,
+  h6.cssNativeStyles {
+    line-height: initial;
+    -webkit-text-size-adjust: initial;
+    tab-size: initial;
+    font-family: initial;
+    font-feature-settings: initial;
+    font-variation-settings: initial;
+    -webkit-tap-highlight-color: initial;
+  }
+}
+
+h1.cssNativeStyles,
+h2.cssNativeStyles,
+h3.cssNativeStyles,
+h4.cssNativeStyles,
+h5.cssNativeStyles,
+h6.cssNativeStyles {
+  font-size: revert;
+  font-weight: revert;
+}
+
+a.cssNativeStyles {
+  color: revert;
+  text-decoration: revert;
+}
+
+b.cssNativeStyles,
+strong.cssNativeStyles {
+  font-weight: revert;
+}
+
+blockquote.cssNativeStyles,
+dl.cssNativeStyles,
+dd.cssNativeStyles,
+h1.cssNativeStyles,
+h2.cssNativeStyles,
+h3.cssNativeStyles,
+h4.cssNativeStyles,
+h5.cssNativeStyles,
+h6.cssNativeStyles,
+hr.cssNativeStyles,
+figure.cssNativeStyles,
+p.cssNativeStyles,
+pre.cssNativeStyles {
+  margin: revert;
+}
+
+ol.cssNativeStyles,
+ul.cssNativeStyles {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
+}
+
+/* NOTE: *-color variables below are to help with VS Code color preview, don't use them in the code as they might get removed: */
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+  }
+
+  :root:not(.dark) {
+    --background: 30 14% 95%;
+    --background-color: hsl(30 14% 95%);
+    --foreground: 240 5% 11%;
+    --foreground-color: hsl(240 5% 11%);
+
+    --card: 0 0% 98%;
+    --card-color: hsl(0 0% 98%);
+    --card-foreground: 240 5% 11%;
+    --card-foreground-color: hsl(240 5% 11%);
+
+    --popover: 0 0% 98%;
+    --popover-color: hsl(0 0% 98%);
+    --popover-foreground: 240 5% 11%;
+    --popover-foreground-color: hsl(240 5% 11%);
+
+    --primary: 8 100% 55%;
+    --primary-color: hsl(8 100% 55%);
+    --primary-foreground: 0 0% 98%;
+    --primary-foreground-color: hsl(0 0% 98%);
+
+    --secondary: 30 10% 92%;
+    --secondary-color: hsl(30 10% 92%);
+    --secondary-foreground: 240 5% 11%;
+    --secondary-foreground-color: hsl(240 5% 11%);
+
+    --muted: 30 10% 88%;
+    --muted-color: hsl(30 10% 88%);
+    --muted-foreground: 0 0% 53%;
+    --muted-foreground-color: hsl(0 0% 53%);
+
+    --accent: 30 12% 90%;
+    --accent-color: hsl(30 12% 90%);
+    --accent-foreground: 240 5% 11%;
+    --accent-foreground-color: hsl(240 5% 11%);
+
+    --border: 30 10% 85%;
+    --border-color: hsl(30 10% 85%);
+    --input: 30 10% 85%;
+    --input-color: hsl(30 10% 85%);
+
+    --ring: 8 100% 55%;
+    --ring-color: hsl(8 100% 55%);
+
+    --destructive: 0 84% 60%;
+    --destructive-color: hsl(0 84% 60%);
+    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground-color: hsl(0 0% 98%);
+
+    --warning: 38 98% 43%;
+    --warning-color: hsl(38 98% 43%);
+    --warning-foreground: 0 0% 98%;
+    --warning-foreground-color: hsl(0 0% 98%);
+
+    --success: 140 60% 45%;
+    --success-color: hsl(140 60% 45%);
+    --success-foreground: 0 0% 98%;
+    --success-foreground-color: hsl(0 0% 98%);
+  }
+
+  :root.dark {
+    --background: 260 5% 9%;
+    --background-color: hsl(260 5% 9%);
+    --foreground: 0 0% 98%;
+    --foreground-color: hsl(0 0% 98%);
+
+    --card: 240 5% 11%;
+    --card-color: hsl(240 5% 11%);
+    --card-foreground: 0 0% 98%;
+    --card-foreground-color: hsl(0 0% 98%);
+
+    --popover: 240 5% 11%;
+    --popover-color: hsl(240 5% 11%);
+    --popover-foreground: 0 0% 98%;
+    --popover-foreground-color: hsl(0 0% 98%);
+
+    --primary: 8 100% 55%;
+    --primary-color: hsl(8 100% 55%);
+    --primary-foreground: 0 0% 98%;
+    --primary-foreground-color: hsl(0 0% 98%);
+
+    --secondary: 0 0% 15%;
+    --secondary-color: hsl(0 0% 15%);
+    --secondary-foreground: 0 0% 90%;
+    --secondary-foreground-color: hsl(0 0% 90%);
+
+    --muted: 0 0% 18%;
+    --muted-color: hsl(0 0% 18%);
+    --muted-foreground: 0 0% 53%;
+    --muted-foreground-color: hsl(0 0% 53%);
+
+    --accent: 0 0% 20%;
+    --accent-color: hsl(0 0% 20%);
+    --accent-foreground: 0 0% 98%;
+    --accent-foreground-color: hsl(0 0% 98%);
+
+    --border: 0 0% 22%;
+    --border-color: hsl(0 0% 22%);
+    --input: 0 0% 22%;
+    --input-color: hsl(0 0% 22%);
+
+    --ring: 8 100% 60%;
+    --ring-color: hsl(8 100% 60%);
+
+    --destructive: 0 70% 50%;
+    --destructive-color: hsl(0 70% 50%);
+    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground-color: hsl(0 0% 98%);
+
+    --warning: 38 98% 43%;
+    --warning-color: hsl(38 98% 43%);
+    --warning-foreground: 0 0% 98%;
+    --warning-foreground-color: hsl(0 0% 98%);
+
+    --success: 140 60% 45%;
+    --success-color: hsl(140 60% 45%);
+    --success-foreground: 0 0% 98%;
+    --success-foreground-color: hsl(0 0% 98%);
+  }
+  /* Scrollbar for FireFox only: */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    &:hover {
+      scrollbar-color: hsl(var(--border)) transparent;
+    }
+  }
+
+  /* Scrolbar for other browsers: */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    margin: 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  :hover::-webkit-scrollbar-thumb {
+    background-color: hsla(var(--border) / 0.7);
+    &:hover {
+      background-color: hsl(var(--border));
+    }
+  }
+  @media screen and (max-width: 480px) {
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Swiper scrollbar */
+.swiper-scrollbar {
+  --swiper-scrollbar-bg-color: hsla(var(--border) / 0.2);
+  --swiper-scrollbar-drag-bg-color: hsla(var(--border) / 0.7);
+}
+.swiper-scrollbar:hover {
+  --swiper-scrollbar-drag-bg-color: hsl(var(--border));
+}
