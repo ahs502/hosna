@@ -1,0 +1,13 @@
+*.css
+
+landing
+
+docs
+
+server/dist
+server/prisma
+server/src/prisma
+
+web/index.html
+web/src/index.css
+web/dist

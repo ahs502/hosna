@@ -1,0 +1,12 @@
+diff --git a/node_modules/shadcn-ui/dist/index.js b/node_modules/shadcn-ui/dist/index.js
+index 03f9553..2c6b76f 100644
+--- a/node_modules/shadcn-ui/dist/index.js
++++ b/node_modules/shadcn-ui/dist/index.js
+@@ -10,6 +10,7 @@ import path from "path";
+ // src/utils/resolve-import.ts
+ import { createMatchPath } from "tsconfig-paths";
+ async function resolveImport(importPath, config) {
++  if (importPath.startsWith('.')) return importPath;
+   return createMatchPath(config.absoluteBaseUrl, config.paths)(
+     importPath,
+     void 0,

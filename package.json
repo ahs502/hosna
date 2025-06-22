@@ -1,0 +1,49 @@
+{
+  "name": "@maxclix/monorepo",
+  "description": "maxclicks: AI Agents & Agentic customer engagement platform",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "l": "npm run lint.staged",
+    "s": "sloc shared/src server/src web/src landing/src docs/src",
+    "lint.all": "cross-env NODE_ENV=production eslint .",
+    "lint.staged": "cross-env NODE_ENV=production npx lint-staged --verbose",
+    "postinstall": "npm run .install:shared && npm run .install:server && npm run .install:web && npm run .install:landing && npm run .install:docs",
+    ".install:shared": "cd shared && npm install",
+    ".install:server": "cd server && npm install",
+    ".install:web": "cd web && npm install",
+    ".install:landing": "cd landing && npm install",
+    ".install:docs": "cd docs && npm install",
+    "push:stage": "npx git-branch-is main && git diff --exit-code && git pull -f && git checkout stage && git pull -f && git merge main && git push -f && git checkout main",
+    "push:live": "npx git-branch-is main && git diff --exit-code && git pull -f && git checkout live && git pull -f && git merge main && git push -f && git checkout main",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "maxclicks"
+  ],
+  "author": {
+    "name": "maxclicks, LLC",
+    "email": "info@maxclicks.ai"
+  },
+  "contributors": [
+    "Hessamoddin A Shokravi <hessam@maxclicks.ai>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxclix/monorepo"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "git-branch-is": "^4.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "sloc": "^0.3.2"
+  }
+}
