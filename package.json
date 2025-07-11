@@ -5,15 +5,13 @@
   "private": true,
   "scripts": {
     "l": "npm run lint.staged",
-    "s": "sloc shared/src server/src web/src landing/src docs/src",
+    "s": "sloc shared/src server/src web/src",
     "lint.all": "cross-env NODE_ENV=production eslint .",
     "lint.staged": "cross-env NODE_ENV=production npx lint-staged --verbose",
-    "postinstall": "npm run .install:shared && npm run .install:server && npm run .install:web && npm run .install:landing && npm run .install:docs",
+    "postinstall": "npm run .install:shared && npm run .install:server && npm run .install:web",
     ".install:shared": "cd shared && npm install",
     ".install:server": "cd server && npm install",
     ".install:web": "cd web && npm install",
-    ".install:landing": "cd landing && npm install",
-    ".install:docs": "cd docs && npm install",
     "push:stage": "npx git-branch-is main && git diff --exit-code && git pull -f && git checkout stage && git pull -f && git merge main && git push -f && git checkout main",
     "push:live": "npx git-branch-is main && git diff --exit-code && git pull -f && git checkout live && git pull -f && git merge main && git push -f && git checkout main",
     "prepare": "husky install"
