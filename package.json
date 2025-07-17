@@ -1,6 +1,6 @@
 {
-  "name": "@maxclix/monorepo",
-  "description": "maxclicks: AI Agents & Agentic customer engagement platform",
+  "name": "hosna",
+  "description": "hosna",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,18 +17,18 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "maxclicks"
+    "hosna"
   ],
   "author": {
-    "name": "maxclicks, LLC",
-    "email": "info@maxclicks.ai"
+    "name": "hosna, LLC",
+    "email": "info@hosna.ai"
   },
   "contributors": [
-    "Hessamoddin A Shokravi <hessam@maxclicks.ai>"
+    "Hessamoddin A Shokravi ,Alireza Fathi<hessam@hosna.ai>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxclix/monorepo"
+    "url": "https://github.com/ahs502/hosna"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.5",

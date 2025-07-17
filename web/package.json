@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.0.8",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "d": "npm run develop",
@@ -28,7 +28,7 @@
     "npm": ">=10.9.2"
   },
   "keywords": [
-    "maxclicks",
+    "hosna",
     "web"
   ],
   "dependencies": {

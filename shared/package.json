@@ -1,6 +1,6 @@
 {
   "name": "shared",
-  "version": "180.0.0",
+  "version": "1.0.0",
   "types": "./src/index.ts",
   "main": "./src/index.ts",
   "exports": "./src/index.ts",
